@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="./styles/style.css">
 
-    <title>Web Scraping Tool</title>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="./styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
 
-  </head>
-  <body>
-    <div id="wrapper">
-      <h1>Note Scraper</h1>
-      <h2><i>You can do this Joe</i></h2>
-      <div id="articles"></div>
-      <div id="notes"></div>
+  <title>Web Scraping Tool</title>
 
+</head>
 
-      <form action="/submit" method="post">
-        <input type="text" name="username" placeholder="First Name">
-        <input type="password" name="password" placeholder="Last Name">
-          
-        <input type="submit">
-      </form>
-
+<body>
+  <nav>
+    <div class="nav-wrapper topnav">
+      <a href="/" class="brand-logo center">Coding News</a>
+      <ul class="right" id="nav-mobile">
+        <li><a href="/scrape">Scrape</a></li>
+        <li><a href="/clearall">Clear Articles</a></li>
+        <li><a href="https://github.com/DaRican/webscraper" target="_blank">Git Repository</a></li>
+      </ul>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="app.js"></script>
+  </nav>
+  <div id="wrapper">
+    <h1 class="card z-depth-3 center-align">Read the Latest from 'The Entrepreneur: Coding'</h1>
+
+    <div id="articles"></div>
+    <div id="notes"></div>
+
+
+
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="app.js"></script>
 
 
 
 
 
-  </body>
+</body>
+
 </html>
