@@ -28,19 +28,15 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-const MONGODB_URI =
-  process.env.MONGODB_URI || "mongodb://localhost/webscraper";
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/webscraper", { useNewUrlParser: true });
 
-var db = mongoose.connection;
-db.on("error", console.error.bind(console, "connection error:"));
-db.once("open", function () {
-  console.log("Connected to Mongoose!");
-});
+
 
 
 // A GET route for scraping the echoJS website
 app.get("/scrape", function (req, res) {
+
+    console.log("Scrape Started");
   // First, we grab the body of the html with axios
   axios.get("http://www.echojs.com/").then(function (response) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
